@@ -1,0 +1,2 @@
+rootProject.name = "lumpsum-android-app-cfp"
+include ':app'

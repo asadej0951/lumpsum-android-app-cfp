@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/startApp">
+
+    <fragment
+        android:id="@+id/startApp"
+        android:name="com.example.lumpsum_android_app_cfp.startApp.StartAppFragment"
+        android:label="startApp"
+        tools:layout="@layout/fragment_start">
+        <action
+            android:id="@+id/action_startApp_to_checkPin"
+            app:destination="@id/checkPin"
+            app:launchSingleTop="true"
+            app:popUpTo="@+id/startApp"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_startApp_to_termsServiceFragment"
+            app:destination="@id/termsServiceFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/startApp"
+            app:popUpToInclusive="true" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/checkPin"
+        android:name="com.example.lumpsum_android_app_cfp.checkPin.CheckPinFragment"
+        android:label="checkPin"
+        tools:layout="@layout/fragment_check_pin" />
+
+    <fragment
+        android:id="@+id/register"
+        android:name="com.example.lumpsum_android_app_cfp.register.RegisterFragment"
+        android:label="register"
+        tools:layout="@layout/fragment_register" />
+    <fragment
+        android:id="@+id/termsServiceFragment"
+        android:name="com.example.lumpsum_android_app_cfp.termsService.TermsServiceFragment"
+        android:label="fragment_terms_service"
+        tools:layout="@layout/fragment_terms_service">
+        <action
+            android:id="@+id/action_termsServiceFragment_to_register"
+            app:destination="@+id/register"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/termsServiceFragment"
+            app:popUpToInclusive="true" />
+
+    </fragment>
+
+</navigation>
