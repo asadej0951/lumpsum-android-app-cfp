@@ -1,13 +1,12 @@
 package com.example.lumpsum_android_app_cfp.startApp
 
-import androidx.lifecycle.LiveData
+import android.view.View
+import androidx.databinding.ObservableField
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class StartAppViewModel : ViewModel() {
-
-    private val _text = MutableLiveData<String>().apply {
-        value = "This is home Fragment"
-    }
-    val text: LiveData<String> = _text
+    val visibilityProgressBar = ObservableField(View.VISIBLE)
+    val textShow = ObservableField("")
+    val eventCountDown = MutableLiveData<String>()
 }

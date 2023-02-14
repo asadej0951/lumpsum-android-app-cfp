@@ -1,11 +1,15 @@
 package com.example.lumpsum_android_app_cfp
 
 import android.app.Application
+import android.preference.PreferenceManager
 import androidx.multidex.MultiDex
+import com.example.lumpsum_android_app_cfp.modules.utilityModule
 import com.example.lumpsum_android_app_cfp.modules.viewModelModule
+import com.example.lumpsum_android_app_cfp.view.BaseActivity
 import org.koin.android.ext.koin.androidContext
 import org.koin.android.ext.koin.androidLogger
 import org.koin.core.context.startKoin
+import java.util.*
 
 class ProjectApplication : Application() {
     override fun onCreate() {
@@ -14,26 +18,8 @@ class ProjectApplication : Application() {
 
         startKoin {
             androidContext(this@ProjectApplication)
-            modules(arrayListOf(viewModelModule))
+            modules(arrayListOf(viewModelModule,utilityModule))
             androidLogger()
         }
-
-//        var change = ""
-//        val sharedPreferences = PreferenceManager.getDefaultSharedPreferences(this)
-//        val language = sharedPreferences.getString("language", "English")
-//        change = when (language) {
-//            "Turkish" -> {
-//                "tr"
-//            }
-//            "English" -> {
-//                "en"
-//            }
-//            else -> {
-//                ""
-//            }
-//        }
-//
-//        BaseActivity.dLocale = Locale(change) //set any locale you want here
-
     }
 }

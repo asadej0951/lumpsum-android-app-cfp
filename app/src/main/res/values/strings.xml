@@ -7,4 +7,8 @@
     <string name="hello_blank_fragment">Hello blank fragment</string>
 
     <string name="text_title_terms_service">เงื่อนไขการให้บริการ</string>
+    <string name="text_ok">ตกลง</string>
+    <string name="text_check_box_terms_service">ยอมรับข้อตกลง และเงื่อนไขการให้บริการ</string>
+    <string name="text_message_terms_service">คำอธิบายเงื่อนไข</string>
+    <string name="welcome_app">ยินดีต้อนรับ</string>
 </resources>

@@ -5,4 +5,6 @@
 
     <dimen name="d15dp">15dp</dimen>
     <dimen name="text_size_18">18sp</dimen>
+    <dimen name="d0dp">0dp</dimen>
+    <dimen name="d10dp">10dp</dimen>
 </resources>

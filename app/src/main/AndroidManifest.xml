@@ -24,6 +24,15 @@
                 android:name="android.app.lib_name"
                 android:value="" />
         </activity>
+        <service
+            android:name=".utils.service.BackgroundCountDownService"
+            android:enabled="true" >
+        </service>
+        <receiver android:name=".utils.service.SensorRestartedBroadcastReceiver"
+            android:enabled="true"
+            android:exported="true"
+            android:label="RestartServiceWhenStopped">
+        </receiver>
     </application>
 
 </manifest>

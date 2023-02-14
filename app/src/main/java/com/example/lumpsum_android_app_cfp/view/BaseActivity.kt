@@ -7,32 +7,17 @@ import android.view.ContextThemeWrapper
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
+import com.example.lumpsum_android_app_cfp.data.preferences.Preferences
+import org.koin.android.ext.android.inject
 import qiu.niorgai.StatusBarCompat
 import java.util.*
 
 abstract class BaseActivity : AppCompatActivity() {
 
-//    companion object {
-//        var dLocale: Locale? = null
-//    }
-
+    val mPreferences: Preferences by inject()
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
     }
-//
-//    init {
-//        updateConfig(this)
-//    }
-//
-//    private fun updateConfig(wrapper: ContextThemeWrapper) {
-//        if (dLocale == Locale("")) // Do nothing if dLocale is null
-//            return
-//
-//        Locale.setDefault(dLocale)
-//        val configuration = Configuration()
-//        configuration.setLocale(dLocale)
-//        wrapper.applyOverrideConfiguration(configuration)
-//    }
 
     fun onSetStatusBarColor(color: Int) {
         StatusBarCompat.setStatusBarColor(this, ContextCompat.getColor(this, color))
